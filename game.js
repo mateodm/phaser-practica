@@ -69,7 +69,7 @@ function create() {
         loop: true
     });
     function spawnPala() {
-        let random = Math.random() * 300
+        let random = Math.random() * 600
         let leftOrRight = Math.random()
         let operation;
         if(leftOrRight > 0.66) {
@@ -95,19 +95,19 @@ function create() {
                 if (score === 30) {
                     this.gravityDifficult = 800;
                     this.backgroundMusic.rate = 0.85;
-                    this.palaTimerEvent.delay = 400;  
+                    this.palaTimerEvent.delay = 300;  
                 } else if (score === 100) {
                     this.gravityDifficult = 800;
-                    this.palaTimerEvent.delay = 300; 
+                    this.palaTimerEvent.delay = 200; 
                     this.backgroundMusic.rate = 1;
                 } else if (score === 200) {
                     this.gravityDifficult = 1100;
-                    this.palaTimerEvent.delay = 180;
+                    this.palaTimerEvent.delay = 170;
                     this.backgroundMusic.rate = 1.05;  
                 }
                 else if(score === 300) {
                     this.gravityDifficult = 1200;
-                    this.palaTimerEvent.delay = 150
+                    this.palaTimerEvent.delay = 130
                     this.backgroundMusic.rate = 1.1
                 }
             }
@@ -131,7 +131,7 @@ function update() {
         this.pelon.x += 6;
         this.pelon.flipX = false;
     }
-    if (this.pelon.x < 0 || this.pelon.x > 1180) {
+    if (this.pelon.x < 5 || this.pelon.x > 1160) {
         gameOver.call(this, this.pelon, null);
     }
 }
