@@ -81,7 +81,7 @@ function create() {
         else if(leftOrRight <= 0.33){
             operation = this.pelon.x
         }
-        let pala = this.palasGroup.create(operation, 0, "pala").setOrigin(0, 0).setScale(0.42).setSize(100, 250);
+        let pala = this.palasGroup.create(operation, 0, "pala").setOrigin(0, 0).setScale(0.42).setSize(110, 250);
         pala.body.setGravityY(this.gravityDifficult);
         pala.setCollideWorldBounds(true);
         pala.body.onWorldBounds = true;
@@ -131,7 +131,7 @@ function update() {
         this.pelon.x += 6;
         this.pelon.flipX = false;
     }
-    if (this.pelon.x < 5 || this.pelon.x > 1160) {
+    if (this.pelon.x < 10 || this.pelon.x > 1160) {
         gameOver.call(this, this.pelon, null);
     }
 }
