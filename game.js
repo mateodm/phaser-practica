@@ -79,10 +79,9 @@ function create() {
             operation = this.pelon.x - random
         }
         else if(leftOrRight <= 0.33){
-            console.log("hola")
             operation = this.pelon.x
         }
-        let pala = this.palasGroup.create(operation, 0, "pala").setOrigin(0, 0).setScale(0.42).setSize(100, 60);
+        let pala = this.palasGroup.create(operation, 0, "pala").setOrigin(0, 0).setScale(0.42).setSize(100, 250);
         pala.body.setGravityY(this.gravityDifficult);
         pala.setCollideWorldBounds(true);
         pala.body.onWorldBounds = true;
